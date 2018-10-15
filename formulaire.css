@@ -1,0 +1,66 @@
+body{
+	background: #CEF;
+	/* background-image: url("soleil.jpeg"); pour mettre une image sur le fond de notre page
+	background-size:25%; l'image va diviser la page ' perspective partie
+	background-repeat:no-reapeat ou repeat-x ou repeat-y; l'image ne repete pas ou elle sera uniquement horizontale ou verticale
+	background-position: 20px; permet de donner la position de notre image
+	/* background-image: url("soleil.jpeg", url("mon-2e image")permet d'avoir deux images pour le fond de notre page*/
+
+	font-family: "Century Gothic", Verdana, sans-serif; /* famille de police pour assurer que le navigateur de notre utilsateur peut bien lire le texte */ 
+	font-family: 'Open Sans' , sans-serif;
+}
+h1{
+	text-decoration: underline;
+	text-align: center;
+	color: #003;
+}
+select{
+	background-color: #CCC;
+	font-size: 20px;
+	width: 45%;
+
+}
+#o1{
+	font-size: 20px;  /* pour manipuler la case des pays a choisir */
+	width: 15%;
+}
+p{
+	font-weight: bold; /* weight : represente l'épaisseur de la police*/
+	font-style: italic;
+
+}
+input{
+	background-color: #FFF;
+	border-radius: 10px;
+	border-style: groove; /* bordure en relief*/
+	font-weight: bold;    /* le texte à l'interieur des cases sera gras */
+	font-size: 15px;     /* pour manipuler la taille des cases*/
+	/*-webkit-border-radius:10px; /* prefixe vendeur pour android, safari et google chrome*/
+	/*-moz-border-radius:10px;   /* prefixe vendeur pour mozilla*/
+}
+#i1{
+	width: 50px;
+
+}
+.i1{
+	width: 350px; /* pour manipiler la case numero de rue */
+}
+.s1{
+	background-color: green;  /* pour manipuler la case soumettre*/
+	border-color: #0F0;
+	padding: 7px;  /* Détermine la distance entre le texte et les bordures, i.e. la marge intérieure. */
+	width: 100px;
+    height: 30px;
+    /*float: right; pour deplcer le bouton à droite */
+    position: relative; /* permet de deplacer la position de notre bouton */
+    left: 100px;
+}
+
+textarea{
+	width: 30%;
+	height: 100px;
+}
+strong, strong1{
+	text-decoration: underline;
+	font-weight: bold;
+}
