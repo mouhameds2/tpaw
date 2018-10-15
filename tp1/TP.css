@@ -1,0 +1,34 @@
+body{
+	background-color: #CEF;
+}
+.centre{
+	text-align: center;
+	text-decoration: underline;
+}
+
+	
+a:hover /* permet le survol de la souris */
+{
+	color: orange;
+
+}
+tr:nth-child(even){      /*pour coulorer le tableau on utilse tr:nth-child(even); le : represente pseudo 
+	                      classe. pour les paires et tr:nth-child(odd) pour les lignes impaires*/
+     background-color: #F0F;
+}
+tr:nth-child(odd){
+	background-color: #080;
+}
+td:hover{
+	background-color: yellow;
+
+}
+tr:hover{
+	background-color: yellow;
+}
+img:hover{
+	transform: scale(10);
+}
+img{
+	transition: 0.3s;
+}

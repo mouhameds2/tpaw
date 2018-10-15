@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formulaire</title>
+        <meta charset="utf-8">
+       <link rel="stylesheet" href="formulaire.css">
+       <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+       
+    </head>
+    <body>
+    	
+      <form id="Mon formulaire" action="./pagetraitement.php" method="POST"> <!-- permet de creer un formulaire. action c'est le
+    	          chemin vers la page qui traitera le formulaire (serveur).et la method Post permet de transmettre les données du formulaire  via l'entête de la page web-->
+        <h1>Formulaire à remplir pour les étudiant(es) de l'Institut Galilée</h1>
+    	<p class="p1"> Votre civilité : </p>
+    	<input  type="radio" name="civilité" value="Monsieur">M</input> <!-- input de type radio nous permet d'avoir un seul choix possible -->
+    	<input type="radio" name="civilité" value="Madame">Mme</input>
+    	<input  type="radio" name="civilité" value="Mademoiselle">Mlle</input>
+    	<p class="p3">NOM : </p>
+    	<input type="text" name="NOM">
+    	<p class="p4">prénom : </p>
+    	<input type="text" name="prénom">
+    	<p class="p5">N° Etudiant : </p>
+    	<input type="number" name="numero carte d'étudiant">
+    	<p class="p6">Entrez votre date de naissance :</p>
+    	<input type="date" id="date de naissance" name="date de naissance">
+
+    	<p class="p2"> Choisissez votre pays de naissance : </p>
+       	  <select id="o1" name="pays" id="pays"> <!-- permet de creer un menu deroulant contenant des pays -->
+       	  	 <option value="sn" selected="selected">Sénégal</option>  <!-- le Sénégal sera le pays par défaut. et L'attribut value des balises option permet  de  définir les possibles valeurs qui seront envoyées au serveur. -->
+       	  	 <option value="fr">France</option>
+       	  	 <option value="us">USA</option>
+       	  	 <option value="en">Englend</option>
+       	  	
+       	 </select>
+    	<p class="p7"> Choisissez votre formation : </p>
+       	  <select name="formation" id="formation"> 
+       	  	 <option value="sn" selected="selected">Ingénieurie et Innovation en Réseaux et en Images</option>  
+       	  	 <option value="fr">Informatique</option>
+       	  	 <option value="us">Physique</option>
+       	  	 <option value="en">Mathématiques</option>
+       	  	
+       	 </select>
+       	 <p class="p8">Votre adresse :</p>
+   N° :         <input id="i1" type="number" name="numéro de la rue"/><br>
+         <br>
+   Rue :         <input class="i1" type="text" name="nom de la rue"> <br>
+         <br>
+   Code postal : <input type="number" name="code postal"><br>
+         <br>
+   Ville :      <input type="text" name="Ville"> <br>
+         <br>
+   Pays :       <input type="text" name="Pays"> 
+         <p class="p9">Votre numéro de portable :</p>
+         <input type="number" name="numéro portable"><br>
+         <p class="p10">Votre adresse mail:</p>
+         <input type="ma" name="user_name" id="user_name">
+         <p class="p10">Confirmez votre adresse mail:</p>
+         <input type="ma" name="confirmer user_name" id="confirmez user_name"><br>
+         <p class="p11">Votre mot de passe:</p>
+        <input type="password" name="mot de passe">
+        <p class="p15">Votre mot de passe:</p>
+        <input type="password" name="mot de passe">
+        <p class="p12">Quel est votre sport préféré?</p>
+        <input type="checkbox" name="sport" id="Football">football</input><br>
+        <input type="checkbox" name="sport" id="basket">basket</input><br>
+        <input type="checkbox" name="sport" id="tenis">tenis</input><br>
+        <input type="checkbox" name="sport" id="handball">handball</input><br>
+        <input type="checkbox" name="sport" id="boxe">boxe</input><br>
+        <input type="checkbox" name="sport" id="karaté">karaté</input><br>
+        <input type="checkbox" name="sport" id="aucun">aucun</input><br>
+        Autres à préciser : <input type="text" name="autres sport">
+        <p class="p13">Mettez votre carte d'identité : </p>
+        <input type="file" name="ma CI" id="CI"> 
+        <p class="p13">Mettez votre carte d'étudiant: </p>
+        <input type="file" name="CE" id="CE"> 
+        <p class="p13">Mettez votre Cv</p>
+        <input type="file" name="CV" id="CV"> 
+        <p class="p13">Mettez votre lettre de motivation</p>
+        <input type="file" name="LM" id="LM"> <br>
+         <br>
+        <textarea name="texte"> texte </textarea>
+
+        <p class="p14">Soumettez votre dossier</p>
+        <input class="s1" type="submit" value="Soumettre"><br>
+        <br>
+        <hr>
+        <p><strong>Contact:</strong></p>
+        <p> cliquer <a href="mailto:mouhameds2@hotmail.fr">ici </a>pour envoyer un mail</p><br>
+        <br>
+        <p><strong1>Adresse:</strong1></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d933.2438655911906!2d2.3376526129369983!3d48.95604534147871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66922b383ba41%3A0x771c255ed2770a81!2s99+Avenue+Jean+Baptiste+Cl%C3%A9ment%2C+93430+Villetaneuse!5e0!3m2!1sfr!2sfr!4v1539381097788" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+       </form>
+
+        </body>
