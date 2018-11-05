@@ -1,0 +1,33 @@
+	fieldset {
+		background: #CEF;
+	}
+	label{
+       		display: inline-block;
+       		min-width: 140px;
+       	}
+       	div {
+       		text-align: left;
+       	}
+       	#error{
+       		background-color: pink;
+       		padding: 5px;
+       		border-style: 2px;
+       		border: 1px solid black;
+       	}
+      #result{ 
+      	background-color: green;
+       		padding: 5px;
+       		border-style: 2px;
+       		border: 1px solid black;
+       		color: white;
+
+      }	
+      input{
+	background-color: #FFF;
+	border-radius: 10px;
+	border-style: groove; /* bordure en relief*/
+	font-weight: bold;    /* le texte à l'interieur des cases sera gras */
+	font-size: 15px;     /* pour manipuler la taille des cases*/
+	/*-webkit-border-radius:10px; /* prefixe vendeur pour android, safari et google chrome*/
+	/*-moz-border-radius:10px;   /* prefixe vendeur pour mozilla*/
+}

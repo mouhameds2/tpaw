@@ -1,33 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
     <head>
+        <title>Formulaire</title>
         <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-
-        <style>
-          body{
-              background-color: #e9ebee;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 16px;
-              margin: 0 auto;
-              max-width: 800px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="js/main.js"></script>-->
+      
+       <link rel="stylesheet" href="index.css">
+      
+       
+       
     </head>
-    <body>        
-        <h1>tp2</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+    <body>
+    	<h1>Saisie d'une fiche "personnel"</h1>
+    	<fieldset>
+      <form  action="/pagetraitement.php" method="POST"> 
+      	<label for="nom" > Nom : </label>
+      	<input type="text" name="nom" id="nom" required="required" minlength="5" maxlength="20"><br>
+      	<br>
+      	<label for="prénom" > Prénom : </label>
+    	<input type="text" name="prénom" id="prénom"  required="required" minlength="5" maxlength="20"><br>
+        <br>
+        <label for="date de naissance" > Date de naissance : </label>
+    	<input type="date" name="naissance" id="naissance" required="required"  placeholder="JJ/MM/AAAA"><br>
+        <br>
+    	<label for="postale" > Adresse Postale : </label>
+    	<input type="text" name="postale" id="postale" required="required" minlength="5" maxlength="50"><br>
+        <br>
+    	<label for="mail" > Mail : </label>
+    	<input type="email" name="mail" id="mail"  required="required"  minlength="5" maxlength="30"><br>
+         
+         <br>
+         <input type="button" value="Valider" id="validation"><br>
+        <br>
+    	      	   
+      </form>
+
+      <div id="error" hidden="">
+      <span id="nom_manquant"> </span>
+      <span id="prénom_manquant"></span>
+      <span id="date_de_naissance_manquant"></span>
+      <span id="adresse_postale_manquant"></span>
+      <span id="mail_manquant"></span>
+      </div>
+
+      <div id="result" hidden="">
+
+     </fieldset>
+  <script src="formulaire.js"></script>
+     
+  </body>
 </html>
