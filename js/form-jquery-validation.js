@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $( function() {
-    $( "#datepicker" ).datepicker();
+    $( "#datepicker" ).datepicker();  //pour la mise en place du calendrier
   } );
     $("#valider").click(function (event) {
         event.preventDefault();
@@ -27,12 +27,11 @@ $(document).ready(function () {
             }
         });
         if (isError == false) {
-            $(".modal-title").html("Bienvenu" + " "+$("#nom").val());
-            $(".modal-body").html("vous êtes né(e)s le" + "   "   +$("#datepicker").val() + "  "+"et vous habitez" );
+            $(".modal-title").html("Bienvenu" + " "+$("#nom").val() +" "+$("#prénom").val());
+            $(".modal-body").html("vous êtes né(e)s le" + "   "   +$("#datepicker").val() + " <br/> "+"et vous habitez à : "+ $("#adresse").val());
 
             $(".modal-body").append("<img src=' https://maps.googleapis.com/maps/api/staticmap?markers="+ $("#adresse").val() +"&zoom=10&size=400x300&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg '>");   
         
-            $(".modal-footer").html(""+$("#adresse").val());
             
             $('#myModal').modal("show");
         } else {
