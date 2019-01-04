@@ -27,9 +27,9 @@ $( '#prénom' ).keyup(function( event ) {
 
 });
 
-  $( function() {
-    $( "#datepicker" ).datepicker();  //pour la mise en place du calendrier
-  } );
+//  $( function() {
+ //   $( "#datepicker" ).datepicker();  //pour la mise en place du calendrier
+ // } );
     $("#valider").click(function (event) {
           event.preventDefault();
             if ($("#nom").val().length < 3 || $("#prénom").val().length < 3 || $("#datepicker").val().length < 3 || $("#adresse").val().length < 3 || $("#mail").val().length < 3)
