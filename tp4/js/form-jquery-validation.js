@@ -32,7 +32,7 @@ $( '#prénom' ).keyup(function( event ) {
  // } );
     $("#valider").click(function (event) {
           event.preventDefault();
-            if ($("#nom").val().length < 3 || $("#prénom").val().length < 3 || $("#datepicker").val().length < 3 || $("#adresse").val().length < 3 || $("#mail").val().length < 3)
+            if ($("#nom").val().length < 3 || $("#prénom").val().length < 3 || $("#date").val().length < 3 || $("#adresse").val().length < 3 || $("#mail").val().length < 3)
         {
                 $(this).css("border-color","red");
                 $("h5").html("message modal");
@@ -47,7 +47,7 @@ $( '#prénom' ).keyup(function( event ) {
         else
         {
              //contactStore.add("qsdqsd","qsdqsd","dsqfsdf","dsfsdfsdf","dsfsdfsdf");
-            contactStore.add($("#nom").val(),$("#prénom").val(),$("#adresse").val(),$("#datepicker").val(),$("#mail").val());
+            contactStore.add($("#nom").val(),$("#prénom").val(),$("#adresse").val(),$("#date").val(),$("#mail").val());
             contactList = contactStore.getList();
             $("tbody").html('');
             for(var index in contactList){
