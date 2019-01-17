@@ -89,7 +89,7 @@ window.onload = function () {
     // appel AJAX avec fetch
     
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&APPID=4878705eed9b60e0036ce3a8a1299874')
+    fetch('http://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&APPID=4878705eed9b60e0036ce3a8a1299874')
         .then(function(response) {
           
             return response.json();
@@ -104,7 +104,7 @@ window.onload = function () {
             if(json.cod === 200){
                 // on met la réponse du webservice dans la variable cityWeather
                 app.cityWeather = json;
-                app.cityWeather = conditions.toUpperCase();
+
                 app.message = null;
             }else{
                 app.cityWeather = null;
