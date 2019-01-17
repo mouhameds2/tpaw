@@ -23,7 +23,7 @@ window.onload = function () {
 
             // indicateur de chargement
            cityWeatherLoading : false,
-           // mapUrl : 'https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg>',
+            mapUrl : 'https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg>',
         },
 
         // 'mounted' est exécuté une fois l'application VUE totalement disponible
