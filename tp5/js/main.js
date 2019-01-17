@@ -14,7 +14,7 @@ window.onload = function () {
 
             // liste des villes saisies, initialiser avec Paris
             cityList: [{
-                name : 'Paris'
+                name : 'Paris '
 
             }],
 
@@ -23,7 +23,7 @@ window.onload = function () {
 
             // indicateur de chargement
            cityWeatherLoading : false,
-            mapUrl : 'https://maps.googleapis.com/maps/api/staticmap?markers=Paris&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg>'
+           
         },
 
         // 'mounted' est exécuté une fois l'application VUE totalement disponible
@@ -56,7 +56,7 @@ window.onload = function () {
                 // remise à zero du message affiché sous le formulaire
                 this.messageForm = '';
 
-             this.meteo({ name : this.formCityName});
+             //this.meteo({ name : this.formCityName});
                 // remise à zero du champ de saisie
                 this.formCityName = '';
             }
@@ -89,9 +89,9 @@ window.onload = function () {
     // appel AJAX avec fetch
     
 
-    fetch('http://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&APPID=4878705eed9b60e0036ce3a8a1299874')
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+_city.name+'&units=metric&lang=fr&APPID=35d53a7fda2576d3ccee6740b53a6537')
         .then(function(response) {
-            app.mapUrl = "https://maps.googleapis.com/maps/api/staticmap?markers="+_city.name+"&zoom=14&size=400x300&scale=2&key=AIzaSyAkmvI9DazzG9p77IShsz_Di7-5Qn7zkcg>";
+          
             return response.json();
         })
         .then(function(json) {
@@ -104,6 +104,7 @@ window.onload = function () {
             if(json.cod === 200){
                 // on met la réponse du webservice dans la variable cityWeather
                 app.cityWeather = json;
+
                 app.message = null;
             }else{
                 app.cityWeather = null;
